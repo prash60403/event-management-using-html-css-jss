@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <h1>Event Registration</h1>
+    </header>
+
+    <section class="registration-form">
+        <form action="submit_registration.php" method="POST" onsubmit="return validateForm()">
+            <br>
+            <label for="name" >Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            <br>
+            <label for="event">Select Event:</label>
+            <br>
+            <br>
+            <select id="event" name="event" required>
+                <option value="">--Select an Event--</option>
+                <option value="event1">Event 1</option>
+                <option value="event2">Event 2</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Register">
+        </form>
+    </section>
+
+    <script src="js/validation.js"></script>
+</body>
+</html>
